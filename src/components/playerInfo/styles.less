@@ -1,0 +1,91 @@
+@import '../../styles/variables.less';
+
+.player__info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 9px;
+}
+.user-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.user-info__name {
+  max-width: 127px;
+  color: @fontLight;
+  text-align: right;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.user-info__rating {
+  text-align: right;
+}
+
+.btn__balance-container {
+  flex-grow: 1;
+}
+
+.btn__balance {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  height: 26px;
+  background-color: @primary;
+  border-radius: 16px;
+
+  &--green {
+    background-color: @secondary;
+
+    &:hover {
+      background-color: @secondary-hover;
+
+      & > button {
+        background-color: @secondary-hover;
+      }
+    }
+    
+    &:active {
+      background-color: @secondary-active;
+
+      & > button {
+        background-color: @secondary-active;
+      }
+    }
+
+  }
+}
+
+.btn__balance-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 26px;
+  padding: 1px 4px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background-color: @secondary;
+
+  &:hover {
+    cursor: pointer;
+    background-color: @secondary-hover;
+  }
+
+  &:active {
+    background-color: @secondary-active;
+  }
+}
+
+.btn__balance-value {
+  margin-left: 9px;
+  font-size: 12px;
+}
+
+.btn__balance-label {
+  margin-left: -4px;
+  font-size: 12px;
+  font-weight: 600;
+}

@@ -1,0 +1,28 @@
+@import '../../styles/variables.less';
+
+.loader-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.loader {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: @primary;
+}
+
+.loader__indicator {
+  width: 196px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: @secondary;
+}
+
+.loader__progress {
+  font-size: 10px;
+  font-weight: 400;
+}
