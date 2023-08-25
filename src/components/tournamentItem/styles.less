@@ -1,0 +1,173 @@
+@import '../../styles/variables.less';
+
+.item {
+  border-radius: 4px;
+  background-color: @primary;
+  height: 78px;
+  display: flex;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover:not(&--selected) {
+    background-color: @primary-hover;
+  }
+  
+  &:active:not(&--selected) {
+    background-color: @primary-active;
+  }
+  
+  &--selected {
+    background-color: @primary-selected;
+  }
+}
+
+.item__label {
+  padding: 9px 3px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  text-align: center;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  background-color: @secondary;
+  color: @fontLight;
+  text-align: center;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+
+  &--canceled {
+    background-color: @primary-canceled;
+  }
+}
+
+.item__content {
+  width: 100%;
+  padding: 8px;
+
+  &-main {
+    width: 100%;
+    display: flex;
+  }
+
+  &-about {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+}
+.main__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &-tags {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+    margin-bottom: 9px;
+    
+    &--pin {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url('../../../public/icons/pin16x16.svg');
+    }
+    
+    &--main {
+      display: inline-block;
+      padding: 3px;
+      border: 1px solid fade(@fontLight, 70%);
+      border-radius: 2px;
+
+      color: @fontLight;
+      text-align: center; 
+      font-size: 8px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    &--type {
+      width: 16px;
+      height: 16px;
+      vertical-align: bottom;
+    }
+
+  }
+  &-title {
+    margin-bottom: 8px;
+    color: @fontLight;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+// tag
+// tag--main
+// tag--type
+
+.main__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 34px;
+  padding: 11px 3px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  color: @fontLight;
+  background-color: @secondary;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+    background-color: @secondary-hover;
+  }
+
+  &:active {
+    background-color: @secondary-active;
+  }
+
+  &:disabled {
+    cursor: default;
+    color: fade(@fontLight, 30%);
+    background-color: fade(@fontLight, 20%);
+  }
+}
+
+.about__item {
+  padding-left: 18px;
+  font-size: 10px;
+  font-weight: 500;
+  color: fade(@fontLight, 70%);
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  background-position: left center;
+  text-overflow: ellipsis;
+
+  &-time {
+    display: inline-block;
+    flex-grow: 1;
+    background-image: url('../../../public/icons/time14x14.svg');
+  }
+  &-player {
+    width: 70px;
+    background-image: url('../../../public/icons/players14x14.svg');
+  }
+  &-tourney {
+    width: 64px;
+    background-image: url('../../../public/icons/tourney14x14.svg');
+  }
+
+}
