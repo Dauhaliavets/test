@@ -84,13 +84,10 @@
       padding: 3px;
       border: 1px solid fade(@fontLight, 70%);
       border-radius: 2px;
-
       color: @fontLight;
       text-align: center; 
       font-size: 8px;
-      font-style: normal;
       font-weight: 600;
-      line-height: normal;
       text-transform: uppercase;
     }
 
@@ -108,11 +105,10 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
-// tag
-// tag--main
-// tag--type
 
 .main__btn {
   display: flex;
@@ -154,6 +150,7 @@
   background-repeat: no-repeat;
   background-size: 14px 14px;
   background-position: left center;
+  overflow: hidden;
   text-overflow: ellipsis;
 
   &-time {
